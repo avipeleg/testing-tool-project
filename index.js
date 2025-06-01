@@ -1,5 +1,11 @@
-console.log("Test page");
-
-fetch('http://localhost:3000/endpoint1')
+/*
+fetch('http://localhost:3000/')
     .then(res => res.text())
     .then(console.log);
+*/
+// זהו צד הלקוח הקליינט - ששולח את הבקשות לשרת כמו בדוגמה שלנו לבקש את הג׳׳יסון מהשרת ולהציג אותו
+
+
+
+
+

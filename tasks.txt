@@ -1,2 +1,0 @@
-1. Add an additional html pages (in the node server).
-2. Add html elements to the index page and update the DOM (like button, array with products etc.) 
