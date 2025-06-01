@@ -1,39 +1,22 @@
 const express = require('express');
+const fs = require('fs');
 const app = express();
 
-app.get('/', (req, res) => { // end pint - routh '/' - forword slash, mention the first page of the website. 
-  res.send(`
-      <!DOCTYPE html>
-      <html>
-        <head>
-          <title>Minimal Page</title>
-        </head>
-        <body>
-          <h1>Home Page</h1>
-          <a href="/products">Products</a><br>
-          <a href="/faq">FAQ</a><br>
-          <script src="/index.js"> </script>
-        </body>
-      </html>
-    `);
+app.get('/', (req, res) => { // end point - routh '/' - forword slash, mention the first page of the website. 
+  // לאיזה כתובת הקליינט צריך לגשת כדי לקבל את המשאב 
+  //  היות וניגשים לדף הבית הראוט זה רק הסלש 
+  const homepage = fs.readFileSync("pages/home.html", "utf8")
+  res.send(
+    homepage
+  )
 });
 
 app.get('/products', (req, res) => { // end pint - routh '/' - forword slash, mention the first page of the website. 
   //res.send('Hello from Express!'); This equal to the below code   
-
-  res.send(`
-      <!DOCTYPE html>
-      <html>
-        <head>
-          <title>Minimal Page</title>
-        </head>
-        <body>
-          <h1>Products</h1>
-          <a href="/"> Home </a><br>
-          <script src="/index.js"> </script>
-        </body>
-      </html>
-    `)
+  const productsPage = fs.readFileSync("pages/products.html", "utf8");
+  res.send(
+    productsPage
+  );
 });
 
 app.get('/faq', (req, res) => { // end pint - routh '/' - forword slash, mention the first page of the website. 
