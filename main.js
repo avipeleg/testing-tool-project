@@ -49,7 +49,6 @@ app.get('/faq', (req, res) => { // end pint - routh '/' - forword slash, mention
           <h1>FAQ</h1>
           <a href="/"> Home </a><br>
           <a href="/products"> Products </a><br>
-          
           <script src="/index.js"> </script> 
         </body>
       </html>
